@@ -1,0 +1,88 @@
+:root {
+    --main-color: rgb(249, 177, 70);
+}
+
+* {
+    box-sizing: border-box;
+    background-color: rgb(99, 99, 255);
+}
+
+html {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.search-bar {
+    padding: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form {
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+.search-bar form label{
+    font-size: 1.75em;
+}
+
+.search-bar form input, .search-bar form button {
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 7px;
+    padding: 12px;
+    width: 100%;
+
+}
+
+.search-bar form input {
+    background-color: var(--main-color);
+
+}
+
+.search-bar form button {
+    padding: 12px 25px;
+    color: white;
+    background-color: rgb(225, 41, 0);
+    
+}
+
+.search-bar form button:hover {
+    background-color: rgb(206, 40, 3);
+}
+
+.search-history {
+    width: 100%;
+}
+
+.search-history--item {
+    border: 1px black solid;
+    padding: 5px 20px;
+    margin: 5px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #a7a7a7;
+}
+
+.search-history--item:hover {
+    background-color: #fcfbfb;
+}
+
+.forecast-card {
+    border-radius: 8px;
+    margin: 4px;
+    height: 300px;
+    padding: 6px;
+    background-color: rgb(133, 133, 133);
+}
+
+.weather-card {
+    margin: 4px;
+    background-color: var(--main-color);
+    border-radius: 8px;
+}

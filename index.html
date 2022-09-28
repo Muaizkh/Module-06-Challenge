@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.1/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main class="row">
+        <section class="col-12 col-md-4 col-lg-3 container search-bar flex-column"> <!-- this row is created for the purpose of housing the serach bar and search history-->
+            <form id="search-bar-form">
+                <label for="search">Lookup a city</label>
+                <input type="text" id="search" placeholder="Search">
+                <button type="submit" id="search-button">Go!</button>
+            </form>
+            <ol id="search-history" class="search-history">
+
+            </ol>
+        </section>
+        <section class="col-12 col-md-8 col-lg-9 container"> 
+            <!-- this seciotn will house the results from the search and store results and disply them on the page -->
+            <h2>Weather Now</h2>
+            <article class="row" id="todays-forecast">
+
+            </article>
+            <h2>WeekDay Forecast</h2>
+            <div class="row" id="weekday-forecast">
+
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
