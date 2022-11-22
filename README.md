@@ -12,3 +12,7 @@ To use this page simply search up the city and look at the reuslts that are then
 
 This page has no licenses added to it
 
+## Credits
+
+This page has been worked on by Muaiz Khan
+
