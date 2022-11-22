@@ -2,41 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.1/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-
-    <title>Weather Dashboard</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+  <link rel="stylesheet" type="text/css" href="./Assets/style.css" />
+    <title>Weather Application</title>
 </head>
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
+        <h1>Weather App</h1>
     </header>
-    <main class="row">
-        <section class="col-12 col-md-4 col-lg-3 container search-bar flex-column"> <!-- this row is created for the purpose of housing the serach bar and search history-->
-            <form id="search-bar-form">
-                <label for="search">Lookup a city</label>
-                <input type="text" id="search" placeholder="Search">
-                <button type="submit" id="search-button">Go!</button>
+    
+    <main>
+        <nav>
+            <h2>Find a City:</h2>
+            <form action="#" id="search_form">
+                <input type="text" id="city_input" placeholder="City">
+                <button type="submit" class="nav_button" id="submit_button">Search</button>
             </form>
-            <ol id="search-history" class="search-history">
+            <div class="split_bar"></div>
+            <ul id="search_history">
+                <button class="nav_button">City</button>
+            </ul>
+        </nav>
 
-            </ol>
-        </section>
-        <section class="col-12 col-md-8 col-lg-9 container"> 
-            <!-- this seciotn will house the results from the search and store results and disply them on the page -->
-            <h2>Weather Now</h2>
-            <article class="row" id="todays-forecast">
-
-            </article>
-            <h2>WeekDay Forecast</h2>
-            <div class="row" id="weekday-forecast">
-
+        <section id="weather_display">
+            <div id="currentDayStats">
+                
+                <div>
+                    <h2 id="currentDayCity">City (MM/DD/YYYY)</h2>
+                    <img src="" id="currentDayImg" class="forecast_image">
+                </div>
+                <p id="currentDayTemp">Temp: temp</p>
+                <p id="currentDayWind">Wind: wind </p>
+              
+            </div>
+            <div id="weekly_stats">
+                <h3>5-Day Forecast:</h3>
+                <div id="forecast">
+                    <div class="forecast_card">
+                        <h4>MM/DD/YYYY</h4>
+                        <div><img src="" class="forecast_image"></div>
+                        <p id="card_temp">Temp: </p>
+                        <p id="card_wind">Wind: </p>
+                       
+                    </div>
+                    <div class="forecast_card">
+                        <h4>MM/DD/YYYY</h4>
+                        <div><img src="" class="forecast_image"></div>
+                        <p id="card_temp">Temp: </p>
+                        <p id="card_wind">Wind: </p>
+                       
+                    </div>
+                    <div class="forecast_card">
+                        <h4>MM/DD/YYYY</h4>
+                        <div><img src="" class="forecast_image"></div>
+                        <p id="card_temp">Temp: </p>
+                        <p id="card_wind">Wind: </p>
+                        
+                    </div>
+                    <div class="forecast_card">
+                        <h4>MM/DD/YYYY</h4>
+                        <div><img src="" class="forecast_image"></div>
+                        <p id="card_temp">Temp: </p>
+                        <p id="card_wind">Wind: </p>
+                        
+                    </div>
+                    <div class="forecast_card">
+                        <h4>MM/DD/YYYY</h4>
+                        <div><img src="" class="forecast_image"></div>
+                        <p id="card_temp">Temp: </p>
+                        <p id="card_wind">Wind: </p>
+                
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="./assets/script.js"></script>
+
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./Assets/script.js"></script>
 </body>
 </html>

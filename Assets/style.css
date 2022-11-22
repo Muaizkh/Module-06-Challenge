@@ -1,88 +1,155 @@
 :root {
-    --main-color: rgb(249, 177, 70);
+    --button-blue: #1160f1;
+    --button-blue-hover: #546fa3;
+    --light-blue: #001e56;
+    --dark-blue: #20084b;
+    --light: white;
+    --dark: black;
+    --grey: rgb(180, 180, 180);
+    --dark-grey: rgb(110, 110, 110);
+    --card-blue: #2d3e50;
 }
 
-* {
-    box-sizing: border-box;
-    background-color: rgb(99, 99, 255);
+/*Element Selectors*/
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
 }
 
-html {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
+header {
+    width: 100%;
+    height: 10%;
+    background-image: linear-gradient(to left, var(--dark-blue), var(--light-blue));
+    color: var(--dark-blue);
+    text-align: center;
+    padding: 20px;
 }
 
 h1 {
-    text-align: center;
+    color: var(--light);
+    font-size: 40px;
 }
 
-.search-bar {
-    padding: 22px;
+h2 {
+    color: var(--dark);
+    font-size: 30px;
+}
+
+h3 {
+    color: var(--dark);
+    padding-bottom: 10px;
+}
+
+nav {
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    display: inline;
+}
+
+nav > * {
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 96;
+}
+
+nav h2 {
+    padding-top: 10px;
+}
+
+nav form > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nav_button {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.forecast_image {
+    height: 40px;
+}
+
+.split_bar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    border-radius: 100px;
+    height: 3px;
+    background-color: var(--grey);
+}
+
+.forecast_card {
+    background-color: var(--card-blue);
+    width: 15%;
+    color: var(--light);
+    padding: 10px;
+}
+
+.forecast_card > * {
+    padding-bottom: 10px;
+}
+#forecast {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#submit_button {
+    background-color: var(--button-blue);
+    width: 100%;
+    color: var(--light);
+}
+
+#submit_button:hover {
+    background-color: var(--button-blue-hover);
+}
+
+#city_input {
+    width: 100%;
+    height: 35px;
+    border-width: 1px;
+    border-color: var(--grey);
+    text-indent: 10px;
+    border-radius: 5px;
+}
+
+#search_history > * {
+    width: 100%;
+    background-color: var(--grey);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#search_history > *:hover {
+    background-color: var(--dark-grey);
+}
+
+#weather_display {
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#currentDayStats {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color: var(--grey);
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+#currentDayStats div {
     display: flex;
     align-items: center;
 }
 
-.search-bar form {
-    margin-bottom: 22px;
-    width: 100%;
-}
-
-.search-bar form label{
-    font-size: 1.75em;
-}
-
-.search-bar form input, .search-bar form button {
-    border: none;
-    margin-bottom: 12px;
-    border-radius: 7px;
-    padding: 12px;
-    width: 100%;
-
-}
-
-.search-bar form input {
-    background-color: var(--main-color);
-
-}
-
-.search-bar form button {
-    padding: 12px 25px;
-    color: white;
-    background-color: rgb(225, 41, 0);
-    
-}
-
-.search-bar form button:hover {
-    background-color: rgb(206, 40, 3);
-}
-
-.search-history {
-    width: 100%;
-}
-
-.search-history--item {
-    border: 1px black solid;
-    padding: 5px 20px;
-    margin: 5px auto;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #a7a7a7;
-}
-
-.search-history--item:hover {
-    background-color: #fcfbfb;
-}
-
-.forecast-card {
-    border-radius: 8px;
-    margin: 4px;
-    height: 300px;
-    padding: 6px;
-    background-color: rgb(133, 133, 133);
-}
-
-.weather-card {
-    margin: 4px;
-    background-color: var(--main-color);
-    border-radius: 8px;
+#currentDayStats > * {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
